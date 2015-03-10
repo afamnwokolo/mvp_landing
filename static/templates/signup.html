@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block jumbotron %}
+    
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>I used bootstrap for a template to make some of the pages </p>
+        <p><a class="btn btn-primary btn-lg" href="{% url 'aboutus' %}" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    
+
+{% endblock %}
+
+{% block content %}
+        <div class="col-sm-3">
+          <h2>What does this site do?</h2>
+          <p>Almost Absolutely nothing. But this is my first attempt to make a web page. while it is still a development server i think its pretty cool how much ive done so far. So this button below will link you to a page. Its not about the content but rather the process ;)</p>
+          <p><a class="btn btn-default" href="{% url "whatitdoes" %}" role="button">What It Does &raquo;</a></p>
+        </div>
+        <div class="col-sm-3">
+          <h2>What does this site do in french??</h2>
+          <p>Presque Absolument rien . Mais ce est ma premiere tentative de faire une page Web . alors qu il est encore un serveur de developpement je pense que son ive bien assez cool comment fait jusqu ici. Donc, ce bouton ci-dessous vous lien vers une page . Ce ne est pas sur le contenu mais plutot le processus ;) </p>
+          <p><a class="btn btn-default" href="{% url "cequilfait" %}" role="button">Ce-qu-il-fait &raquo;</a></p>
+       </div>
+        <div class="col-sm-3">
+          <h2>What programmes did i use?</h2>
+          <p>I first of all used Django and pip in my terminal window then i downloaded a bunch of add ons through pip onto my terminal. Although i worked on my terminal a bunch, most of my work was done in KOMODO http://komodoide.com/ , a cross platform IDE that handles  Python, PHP, Ruby, Perl, Tcl, NodeJS, HTML, CSS and JavaScript. For a complete list of all the add-ons i used in terminal, click my link below.</p>
+          <p><a class="btn btn-default" href="{% url "usedprogrammes" %}" role="button">Used Programmes &raquo;</a></p>
+        </div>
+        
+        <div class="col-sm-3">
+            <h1>Order now!!</h1>
+            <p>Do you want to pay me money for no reason???</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="WZJQCXZLT9FEN">
+
+<input type="hidden" name="on0" value="Afams Product">
+    <select class="form-control" name="os0">
+	<option value="Basic">Basic $100.00 USD</option>
+	<option value="Basic *">Basic * $190.00 USD</option>
+	<option value="Premium">Premium $280.00 USD</option>
+</select>
+
+
+<input type="hidden" name="currency_code" value="USD"> <br/>
+    <input type='submit' class= 'btn btn-success btn-block'>
+</form>
+
+        </div>
+
+
+{% endblock %}
